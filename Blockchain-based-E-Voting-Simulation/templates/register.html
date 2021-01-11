@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+
+{% block body_bl %}
+<div class="container">
+    <h2 class="my-2"> Registration Details</h2>
+    
+<form action="{% url 'register' %}" method="POST"> {% csrf_token %}
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">First name</label>
+        <input type="text" class="form-control" id="name" name="first_name">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="last_name">Last name</label>
+        <input type="text" class="form-control" id="last_name" name="last_name"> 
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" name="email">
+      </div>
+
+
+
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Phone no.</label>
+        <input type="text" class="form-control" id="inputPassword4" name="phone_no"> 
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="aadhar">aadhar no.</label>
+        <input type="text" class="form-control" id="aadhar" name="aadhar" >
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="voter_id">Voter Id</label>
+        <input type="text" class="form-control" id="voter_id" name="voter_id">
+      </div>
+
+
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="Address">
+    </div>
+
+
+    <div class="form-group">
+      <label for="inputAddress2">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6"><label for="input_city">City</label>
+        <input type="text" class="form-control" id="input_city">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="id_proof">Upload Id proof</label>
+        <input type="file" class="form-control-file" id="id_proof">
+      </div>
+
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          I agree all my above information is correct
+        </label>
+            
+
+            
+       
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+  {% endblock %}
